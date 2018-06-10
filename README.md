@@ -1,0 +1,2 @@
+# ios-avspeechsynthesizer-demo
+AVSpeechSynthesizerのデモ
