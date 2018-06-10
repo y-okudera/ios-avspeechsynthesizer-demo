@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vsc-Xj-hpa">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Attributed Speech View Controller-->
+        <scene sceneID="67s-Cz-7WI">
+            <objects>
+                <viewController id="Vsc-Xj-hpa" customClass="AttributedSpeechViewController" customModule="ios_avspeechsynthesizer_demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fE2-dL-FPl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ahy-1Y-iS9">
+                                <rect key="frame" x="166" y="20" width="43" height="30"/>
+                                <state key="normal" title="Speak"/>
+                                <connections>
+                                    <action selector="didTapSpeakButton:" destination="Vsc-Xj-hpa" eventType="touchUpInside" id="hVJ-Um-YDd"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VYI-g3-Kj9">
+                                <rect key="frame" x="16" y="113" width="343" height="343"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="VYI-g3-Kj9" secondAttribute="height" multiplier="1:1" id="A43-MY-04E"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="EFD-bc-uWT">
+                                <rect key="frame" x="163" y="66" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchChanged:" destination="Vsc-Xj-hpa" eventType="valueChanged" id="bhf-sm-Brf"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ahy-1Y-iS9" firstAttribute="top" secondItem="18c-4X-WGE" secondAttribute="top" id="58h-ax-d3N"/>
+                            <constraint firstItem="EFD-bc-uWT" firstAttribute="centerX" secondItem="fE2-dL-FPl" secondAttribute="centerX" id="IXe-FW-tTv"/>
+                            <constraint firstItem="VYI-g3-Kj9" firstAttribute="top" secondItem="EFD-bc-uWT" secondAttribute="bottom" constant="16" id="Nxm-NT-wse"/>
+                            <constraint firstItem="VYI-g3-Kj9" firstAttribute="leading" secondItem="18c-4X-WGE" secondAttribute="leading" constant="16" id="VbC-Hl-Yop"/>
+                            <constraint firstItem="Ahy-1Y-iS9" firstAttribute="centerX" secondItem="fE2-dL-FPl" secondAttribute="centerX" id="WSj-Qh-R5E"/>
+                            <constraint firstItem="EFD-bc-uWT" firstAttribute="top" secondItem="Ahy-1Y-iS9" secondAttribute="bottom" constant="16" id="j6E-mf-uBM"/>
+                            <constraint firstItem="18c-4X-WGE" firstAttribute="trailing" secondItem="VYI-g3-Kj9" secondAttribute="trailing" constant="16" id="nXx-YR-X4h"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="18c-4X-WGE"/>
+                    </view>
+                    <connections>
+                        <outlet property="speakButton" destination="Ahy-1Y-iS9" id="wyU-86-LiM"/>
+                        <outlet property="textView" destination="VYI-g3-Kj9" id="uwP-wF-J1f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3RC-31-f6a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="176.80000000000001" y="-45.42728635682159"/>
+        </scene>
+    </scenes>
+</document>
